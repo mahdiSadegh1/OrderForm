@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammadmahdi Sadeghi">
+    <title>Order Form</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", Times, serif; /* Font as Times New Roman */
+            color: rgb(0, 0, 0); /* Text color */
+        }
+        .container {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .sub-container {
+            background-color: lightgray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-input {
+            width: calc(100% - 12px); /* Adjusting for padding */
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .form-textarea {
+            width: calc(100% - 12px); /* Adjusting for padding */
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .total-row {
+            font-weight: bold;
+        }
+        .button-container {
+            text-align: left; /* Aligning left */
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            background-color: transparent; /* No background color */
+            color: black; /* Text color */
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid black; /* Add border */
+            font-family: "Times New Roman", Times, serif; /* Font as Times New Roman */
+        }
+        .button:hover {
+            background-color: lightgray; /* Change color on hover */
+        }
+        .button.clear:hover {
+            background-color: #000000; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: orange;">Order Form</h2>
+    </div>
+    <div class="sub-container">
+        <h3>Basic Information</h3>
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name" value="Mohammadmahdi Sadeghi" size="30" disabled class="form-input">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" value="90541134135@algonquincdistudent.ca" class="form-input">
+        <label for="address" class="form-label">Address:</label>
+        <textarea id="address" name="address" rows="5" cols="25" class="form-textarea"></textarea>
+        <label for="postcode" class="form-label">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" class="form-input">
+    </div>
+    <div class="sub-container">
+        <h3>Product Information</h3>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Part Number</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="product1" name="product1" value="Box" class="form-input"></td>
+                    <td><input type="text" id="part-number1" name="part-number1" value="AC100" class="form-input"></td>
+                    <td><input type="number" id="quantity1" name="quantity1" class="form-input"></td>
+                    <td><input type="number" id="unit-price1" name="unit-price1" value="5" step="0.01" class="form-input" readonly></td>
+                    <td><input type="number" id="subtotal1" name="subtotal1" step="0.01" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="product2" name="product2" value="Coffee Table" class="form-input"></td>
+                    <td><input type="text" id="part-number2" name="part-number2" value="AC200" class="form-input"></td>
+                    <td><input type="number" id="quantity2" name="quantity2" class="form-input"></td>
+                    <td><input type="number" id="unit-price2" name="unit-price2" value="100" step="0.01" class="form-input" readonly></td>
+                    <td><input type="number" id="subtotal2" name="subtotal2" step="0.01" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="product3" name="product3" value="Chair" class="form-input"></td>
+                    <td><input type="text" id="part-number3" name="part-number3" value="AC300" class="form-input"></td>
+                    <td><input type="number" id="quantity3" name="quantity3" class="form-input"></td>
+                    <td><input type="number" id="unit-price3" name="unit-price3" value="150" step="0.01" class="form-input" readonly></td>
+                    <td><input type="number" id="subtotal3" name="subtotal3" step="0.01" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="product4" name="product4" value="Desk" class="form-input"></td>
+                    <td><input type="text" id="part-number4" name="part-number4" value="AC400" class="form-input"></td>
+                    <td><input type="number" id="quantity4" name="quantity4" class="form-input"></td>
+                    <td><input type="number" id="unit-price4" name="unit-price4" value="120" step="0.01" class="form-input" readonly></td>
+                    <td><input type="number" id="subtotal4" name="subtotal4" step="0.01" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="product5" name="product5" value="Computer Table" class="form-input"></td>
+                    <td><input type="text" id="part-number5" name="part-number5" value="AC500" class="form-input"></td>
+                    <td><input type="number" id="quantity5" name="quantity5" class="form-input"></td>
+                    <td><input type="number" id="unit-price5" name="unit-price5" value="130" step="0.01" class="form-input" readonly></td>
+                    <td><input type="number" id="subtotal5" name="subtotal5" step="0.01" class="form-input"></td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="4">Total:</td>
+                    <td><input type="text" id="total" name="total" class="form-input" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="sub-container">
+        <h3>Credit Card Information</h3>
+        <label for="card-type" class="form-label">Card Type:</label>
+        <div class="form-input">
+            <input type="radio" id="visa" name="card-type" value="visa">
+            <label for="visa">Visa</label>
+            <input type="radio" id="mastercard" name="card-type" value="mastercard">
+            <label for="mastercard">MasterCard</label>
+            <input type="radio" id="gift-card" name="card-type" value="gift-card">
+            <label for="gift-card">Gift Card</label>
+        </div>
+        <label for="card-number" class="form-label">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" class="form-input">
+        <label for="expiry-date" class="form-label">Expiry Date:</label>
+        <input type="text" id="expiry-date" name="expiry-date" class="form-input" placeholder="MM/YYYY">
+        <label for="delivery-address" class="form-label">Delivery Address:</label>
+        <textarea id="delivery-address" name="delivery-address" rows="5" cols="25" class="form-textarea"></textarea>
+    </div>
+    <div class="button-container">
+        <button class="button" id="send-order">Send Order</button>
+        <button class="button clear" id="clear-form">Clear Form</button>
+    </div>
+    <script>
+        // Calculate total when quantity or unit price changes
+        const quantityInputs = document.querySelectorAll('input[name^="quantity"]');
+        const unitPrices = [5, 100, 150, 120, 130]; // Sample unit prices
+
+        quantityInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                const quantity = parseFloat(input.value);
+                const unitPrice = unitPrices[index];
+                const subtotal = quantity * unitPrice;
+                const subtotalInput = document.getElementById(`subtotal${index + 1}`);
+                subtotalInput.value = subtotal.toFixed(2);
+                calculateTotal();
+            });
+        });
+
+        function calculateTotal() {
+            const subtotals = document.querySelectorAll('input[name^="subtotal"]');
+            let total = 0;
+            subtotals.forEach(subtotal => {
+                total += parseFloat(subtotal.value);
+            });
+            document.getElementById('total').value = total.toFixed(2);
+        }
+
+        // Clear form function
+        const clearButton = document.getElementById('clear-form');
+        clearButton.addEventListener('click', clearForm);
+
+        function clearForm() {
+            const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], textarea');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+            document.getElementById('total').value = '';
+        }
+    </script>
+</body>
+</html>
